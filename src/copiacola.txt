@@ -1,0 +1,12 @@
+void andarX(int posX, int velX, bool negPos){
+            if(posX >= -100 && posX <= 100){
+                if(negPos){
+                    posX += velX;
+                } else if(!negPos){
+                    posX -= velX;
+                }
+                else{
+                    std::cout << "Especifique uma direção para a velocidade" << std::endl;
+                }
+            }
+        }
