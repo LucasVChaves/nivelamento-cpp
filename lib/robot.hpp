@@ -18,6 +18,9 @@ class Robot {
         // Movimenta o robô no eixo Y
         // O bool negPos especifica se o robô vai ter velocidade positiva ou negativa em relação ao eixo
         void andarY(bool negPos);
+        //Printa as coordenadas atuais
+        void printCoord();
+
 };
 
 #endif

@@ -1,5 +1,4 @@
 #include <iostream>
-// Inclua o cabeçalho robot.hpp
 #include "robot.hpp"
 
 void Robot::andarX(bool negPos) {
@@ -32,4 +31,8 @@ void Robot::andarY(bool negPos) {
             std::cout << "Especifique uma direção para a velocidade" << std::endl;
         }
     }
+}
+
+void Robot::printCoord(){
+    std::cout << "Estou em X=" << this->posX << " e Y=" << this->posX << std::endl;
 }
