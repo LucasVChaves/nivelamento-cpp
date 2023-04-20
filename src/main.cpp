@@ -1,20 +1,14 @@
 #include <iostream>
-// Retirar depois
+// Inclue os headers
 #include "robot.hpp"
 
 int coordMax = 200, coordMin = -200;
-int coordXObjeto = 30, coordYObjeto = 8;
 int coordXEntrega = -14, coordYEntrega = -60;
 
 int main() {
 
-    // Setup da classe robot, retirar depois
+    // Faça o setup das classes robot e objeto
     Robot robot;
-    robot.posX = 0;
-    robot.posY = 0;
-    robot.velX = 1;
-    robot.velY = 1;
-    robot.pegouObjeto = false;
 
     // Loop do jogo 
     // Modifique esta parte
@@ -22,10 +16,7 @@ int main() {
     while (true) {
         if((robot.posX >= coordMin && robot.posX <= coordMax) && (robot.posY >= coordMin && robot.posY <= coordMax)){
 
-            // retirar depois
-            if(robot.posX == coordXObjeto && robot.posY == coordYObjeto){
-                robot.pegouObjeto = true;
-            }
+            //Faça aqui sua lógica de jogo
 
             // **
             // Verifica se chegou ao lugar certo com o objeto
