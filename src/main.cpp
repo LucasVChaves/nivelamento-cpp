@@ -2,11 +2,12 @@
 #include "objeto.hpp"
 #include "robot.hpp"
 
-int coordMax = 200, coordMin = -200;
+#define COORDMAX 200
+#define COORDMIN -200
+
 int coordXEntrega = -14, coordYEntrega = -60;
 
 int main() {
-
     // Faça o setup das classes robot e objeto
     Robot robot;
     robot.posX = 0;
@@ -23,29 +24,31 @@ int main() {
     // Modifique esta parte
     // Menos o codigo marcado com **
     while (true) {
-        if((robot.posX >= coordMin && robot.posX <= coordMax) && (robot.posY >= coordMin && robot.posY <= coordMax)){
+        if((robot.posX >= COORDMIN && robot.posX <= COORDMAX) && (robot.posY >= COORDMIN && robot.posY <= COORDMAX)){
 
             // Faça aqui sua lógica de jogo
             
             // Ir até o objeto:
-            for(int i = 0; i != objeto.coordX; i++){
+            if(robot.posX < objeto.coordX && !robot.pegouObjeto) {
                 robot.andarX(true);
-                for(int j = 0; j != objeto.coordY;){
-                    robot.andarY(true);
-                }
+                robot.printCoord();
+            } else if(robot.posY < objeto.coordY && !robot.pegouObjeto){
+                robot.andarY(true);
+                robot.printCoord();
             }
 
             // Check pra ver se eu peguei o objeto:
             if(robot.posX == objeto.coordX && robot.posY == objeto.coordY){
                 robot.pegouObjeto = true;
+                std::cout << "Peguei!" << std::endl;
             }
 
-            // Ir até a entrega:
-            for(int i = 0; i != coordXEntrega; i++){
+            if(robot.posX > coordXEntrega && robot.pegouObjeto) {
                 robot.andarX(false);
-                for(int j = 0; j != objeto.coordY; j++){
-                    robot.andarY(true);
-                }
+                robot.printCoord();
+            } else if(robot.posY > coordYEntrega && robot.pegouObjeto){
+                robot.andarY(false);
+                robot.printCoord();
             }
 
             // **
