@@ -2,7 +2,7 @@
 #include "robot.hpp"
 
 void Robot::andarX(bool negPos) {
-    int velX = 1;
+    int velX = this->velY;
     if (negPos) {
         posX += velX;
     }
@@ -15,7 +15,7 @@ void Robot::andarX(bool negPos) {
 }
 
 void Robot::andarY(bool negPos) {
-    int velY = 1;
+    int velY = this->velY;
     if (negPos) {
         posY += velY;
     }

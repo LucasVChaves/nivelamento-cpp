@@ -50,7 +50,7 @@ int main() {
                 robot.andarY(false);
                 robot.printCoord();
             }
-
+    
             // **
             // Verifica se chegou ao lugar certo com o objeto
             if(robot.posX == coordXEntrega && robot.posY == coordYEntrega && robot.pegouObjeto){
