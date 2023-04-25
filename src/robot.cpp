@@ -2,7 +2,6 @@
 #include "robot.hpp"
 
 void Robot::andarX(bool negPos) {
-    int posX = this->posX;
     int velX = this->velX;
     if (posX >= -100 && posX <= 100) {
         if (negPos) {
@@ -18,7 +17,6 @@ void Robot::andarX(bool negPos) {
 }
 
 void Robot::andarY(bool negPos) {
-    int posY = this->posY;
     int velY = this->velY;
     if (posY >= -100 && posY <= 100) {
         if (negPos) {
@@ -34,5 +32,5 @@ void Robot::andarY(bool negPos) {
 }
 
 void Robot::printCoord(){
-    std::cout << "Estou em X=" << this->posX << " e Y=" << this->posX << std::endl;
+    std::cout << "Estou em X=" << this->posX << " e Y=" << this->posY << std::endl;
 }

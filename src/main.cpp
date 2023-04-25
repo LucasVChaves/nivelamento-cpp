@@ -1,8 +1,9 @@
 #include <iostream>
-// Inclue os headers
+// Inclua o header do objeto.
 #include "robot.hpp"
 
-int coordMax = 200, coordMin = -200;
+#define COORDMAX 200
+#define COORDMIN -200
 int coordXEntrega = -14, coordYEntrega = -60;
 
 int main() {
@@ -14,7 +15,7 @@ int main() {
     // Modifique esta parte
     // Menos o codigo marcado com **
     while (true) {
-        if((robot.posX >= coordMin && robot.posX <= coordMax) && (robot.posY >= coordMin && robot.posY <= coordMax)){
+        if((robot.posX >= COORDMIN && robot.posX <= COORDMAX) && (robot.posY >= COORDMIN && robot.posY <= COORDMAX)){
 
             //Faça aqui sua lógica de jogo
 

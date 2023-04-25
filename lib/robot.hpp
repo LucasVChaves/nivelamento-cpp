@@ -5,7 +5,8 @@
 class Robot {
     public:
         // Coordenadas do robô
-        int posX, posY;
+        int posX;
+        int posY;
         // Velocidade em cada eixo
         int velX, velY;
 
