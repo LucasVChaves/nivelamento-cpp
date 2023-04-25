@@ -14,6 +14,6 @@ Siga as instruções e tudo ocorrerá certinho. Em caso de dúvidas volte nas au
     - Velocidade em ambos os eixos como 1.
     - `pegouObjeto = false`.
 - Depois, no loop, desenvolva sua lógica de jogo.
-- O "robô" pegar o objeto e ir até a chegada com ele.
+- O "robô" deve pegar o objeto e ir até a chegada com ele.
 
 **Para compilar utilize o comando `g++ src/*.cpp -I lib/`**
